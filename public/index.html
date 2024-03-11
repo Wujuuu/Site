@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime World</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Estilos adicionais para otimização móvel */
+        header {
+            padding: 10px;
+        }
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            background-color: #333;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            z-index: 99;
+        }
+        .nav-links.open {
+            display: flex;
+        }
+        .nav-links li {
+            padding: 10px 20px;
+            border-bottom: 1px solid #555;
+        }
+        .hamburger-menu {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            color: #fff;
+        }
+        .social-icons {
+            display: none;
+            justify-content: center;
+            padding: 10px 0;
+        }
+        .social-icons a {
+            margin: 0 5px;
+            font-size: 20px;
+            color: #333;
+        }
+        @media only screen and (max-width: 768px) {
+            .social-icons {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Anime World</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#genres">Gêneros</a></li>
+                    <li><a href="admin.html">adm</a></li>
+                    <li><a href="#videos">Vídeos</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h2>Bem-vindo ao Anime World</h2>
+                <p>Explore o vasto universo dos animes!</p>
+            </div>
+        </section>
+
+        <!-- Outras seções aqui -->
+
+        <section id="video-gallery" class="video-gallery">
+            <div class="container">
+                <h2>Playlist de Vídeos</h2>
+                <div id="videos-list" class="videos-list"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Anime World. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+
+</html>
